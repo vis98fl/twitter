@@ -1,0 +1,71 @@
+{
+	"env": "debug",
+    "db": {
+        "mongo": {
+            "url": "mongodb://13.232.233.134:27018/FlexiLoansDB"
+        },
+        "mysql" : {
+            "host": "13.233.13.169",
+            "port": "3306",
+            "database": "flexiloans_staging_db",
+            "user": "uat_user",
+            "password": "Uat@123!",
+            "connection" : 10
+        }
+    },
+    "aws" : {
+        "sns" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "TopicArn" : ""
+        },
+        "eventbridge" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "EventBusName": ""
+        },
+        "sqs" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "TopicUrl" : ""
+        },
+        "secrets" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest"
+        }
+    },
+    "app_config" : {
+        "client_code" : ["client_code"]
+    },
+    "QUICKWORK": {
+        "url": "https://automation.quickwork.co/staticwebhook/api/http_app/notify/5e7d71477a5b87000134556d/",
+        "content_type": "application/json"
+    },
+    "fuzzy": {
+        "url": "https://dev.flexiloans.com",
+        "authorization" : "",
+        "headers" : {
+            "aikey": "hocpsjmgebqxudrykzitvwanlf"
+        },
+        "content_type" : "application/json",
+        "encoding" : null,
+        "connection" : "keep-alive"
+    },
+    "TEST" : {
+        "url" : "https://test.test.co",
+        "headers" : {
+            "authkey" : "b881301b-d5e9-49fc-ab2b-69fea8e6f0c8"
+        },
+        "content_type" : "application/json",
+        "encoding" : null,
+        "connection" : "keep-alive"
+    }
+}

@@ -1,0 +1,63 @@
+{
+	"env": "production",
+    "db": {
+        "mongo": {
+            "url": "mongodb://fladmin:y5pruv%40_e7v9@mongodev.db.flexiloans.com:27017/FlexiLoansDB"
+        },
+        "mysql" : {
+            "host": "mysqldev.db.flexiloans.com",
+            "port": "3306",
+            "database": "los_dev_db1",
+            "user": "los_root",
+            "password": "r00T$1234",
+            "connection" : 10
+        }
+    },
+    "aws" : {
+        "sns" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "TopicArn" : ""
+        },
+        "eventbridge" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "TopicArn" : "arn:aws:events:ap-south-1:657104205419:event-bus/FL_LeadInfo_Stage",
+            "EventBusName": "FL_LeadInfo_Stage"
+        },
+        "sqs" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest",
+            "TopicUrl" : ""
+        },
+        "secrets" : {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-south-1",
+            "apiVersion": "latest"
+        }
+    },
+    "app_config" : {
+        "client_code" : ["offers_front"]
+    },
+    "QUICKWORK": {
+        "url": "https://automation.quickwork.co/staticwebhook/api/http_app/notify/5e7d71477a5b87000134556d/",
+        "content_type": "application/json"
+    },
+    "fuzzy": {
+        "url": "https://dev.flexiloans.com",
+        "authorization" : "",
+        "headers" : {
+            "aikey": "hocpsjmgebqxudrykzitvwanlf"
+        },
+        "content_type" : "application/json",
+        "encoding" : null,
+        "connection" : "keep-alive"
+    }
+}

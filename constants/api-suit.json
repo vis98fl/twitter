@@ -1,0 +1,52 @@
+{
+    "FUZZY" : {
+        "endpoint": "/dspos/nameMatch?pattern={full_name}&text={match_name}", 
+        "method" : "GET",
+        "action_code" : "FUZZY",
+        "name" : "FUZZY",
+        "service" : "fuzzy"
+    },
+    "SAMPLE" : {
+        "endpoint": "/dspos/nameMatch?pattern={full_name}&text={match_name}", 
+        "method" : "GET",
+        "action_code" : "FUZZY",
+        "name" : "SAMPLE_HEAD",
+        "service" : "fuzzy",
+        "header_contract" : {
+            "token" : "{{score}}"
+        },
+        "contract" : {
+            "match_name" : "{{full_name}}"
+        },
+        "pre_flight" : [
+           {
+            "endpoint": "/dspos/nameMatch?pattern={full_name}&text={match_name}", 
+            "method" : "GET",
+            "action_code" : "FUZZY",
+            "name" : "SAMPLE_LINE",
+            "service" : "fuzzy",
+            "contract" : {
+                "full_name" : "{{full_name}}"
+            }
+           },
+           {
+            "endpoint": "/dspos/nameMatch?pattern={full_name}&text={match_name}", 
+            "method" : "GET",
+            "action_code" : "FUZZY",
+            "name" : "FUZZY",
+            "service" : "fuzzy",
+            "contract" : {
+                "full_name" : "{{full_name}}"
+            }
+           } 
+        ]
+    },
+    "QUICKWORKS_WORKFLOW" : {
+        "endpoint": "gst_details",
+        "method": "POST",
+        "action_code": "",
+        "name": "EVENT QUIICKWORKS",
+        "scopes": "*",
+        "service": "QUICKWORK"
+    }
+}

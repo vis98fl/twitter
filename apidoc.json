@@ -1,0 +1,21 @@
+{
+  "name": "YOUR SERVICE NAME",
+  "version": "1.0.0",
+  "description": "Your service description",
+  "title": "Brower api title",
+  "url" : "https://console.flexiloans.com",
+  "sampleUrl": "https://console.flexiloans.com",
+  "header": {
+    "title": "Introduction",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "Closing",
+    "filename": "footer.md"
+  },
+  "template": {
+    "withCompare": true,
+    "withGenerator": true,
+    "aloneDisplay": false
+  }
+}
